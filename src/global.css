@@ -53,5 +53,31 @@ body {
 }
 
 footer{
-    color: lightblue;
+    background-color: #0E0B14;
+    margin-top: 500px;
+    color: #CACACA;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.logo-rodape {
+    width: 100px;
+}
+
+.minidiv-rodape {
+    display: flex;
+    justify-content: center;
+}
+
+.minidiv-rodape p {
+    margin: 12px;
+}
+
+.texto-rodape-maior {
+    width: 30%;
+    text-align: center;
 }
