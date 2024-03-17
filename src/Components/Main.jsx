@@ -2,19 +2,27 @@ import { useState } from "react"
 
 export default function Main () {
 
-  const [nome, setNome] = useState("")
+  const [telefone, setTelefone] = useState("")
 
   return (
-    <div>
-      <p> Nome:
-      <input
-        type="text"
-        name=""
-        id=""
-        onChange={(event)=> setNome(event.target.value)}
-      />
-      {nome}
-      </p>
-    </div>
+    <form>
+      <label>
+        <input
+          type="text"
+          name=""
+          id=""
+          onChange={(event)=> setTelefone(event.target.value)}
+        />
+      </label>
+      <label>
+        <input
+          type="tel"
+          name=""
+          id=""
+          onChange={(event)=> setTelefone(event.target.value)}
+        />
+      </label>
+      <button>Cadastrar</button>
+    </form>
   )
 }
