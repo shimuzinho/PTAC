@@ -2,24 +2,44 @@ import { useState } from "react"
 
 export default function Main () {
 
-  const [telefone, setTelefone] = useState("")
+  const [nome, setNome] = useState("")
+  const [telefone, setTelefone] = useState(0)
+  const [cpf, setCpf] = useState(0)
+  const [listaTelefone, setListaTelefone] = useState([])
+
+  const registrar = (event) => {
+    event.preventDefault()
+    setListaTelefone([...listaTelefone, {
+      nomeSalvo: nome,
+      telefoneSalvo: telefone,
+      cpfSalvo: cpf
+    }])
+  }
 
   return (
-    <form>
-      <label>
+    <form action="" onSubmit={registrar}>
+      <label htmlFor="nome">
         <input
           type="text"
-          name=""
-          id=""
+          name="telefone-lista"
+          id="nome"
+          onChange={(event)=> setNome(event.target.value)}
+        />
+      </label>
+      <label htmlFor="telefone">
+        <input
+          type="tel"
+          name="telefone-lista"
+          id="telefone"
           onChange={(event)=> setTelefone(event.target.value)}
         />
       </label>
-      <label>
+      <label htmlFor="cpf">
         <input
-          type="tel"
-          name=""
-          id=""
-          onChange={(event)=> setTelefone(event.target.value)}
+          type="number"
+          name="telefone-lista"
+          id="cpf"
+          onChange={(event)=> setCpf(event.target.value)}
         />
       </label>
       <button>Cadastrar</button>
