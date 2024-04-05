@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #1e1a2a;
 }
 
 .main-cabecalho {
@@ -80,4 +81,13 @@ footer{
 .texto-rodape-maior {
     width: 30%;
     text-align: center;
+}
+
+.listaContatos {
+    display: flex;
+    width: auto;
+}
+
+p {
+    margin-left: 10px;
 }

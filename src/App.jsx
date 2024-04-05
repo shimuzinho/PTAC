@@ -1,7 +1,7 @@
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Main from "./Components/Main"
-import "./global.css"
+import "./globals.css"
 
 export default function App() {
   return(
