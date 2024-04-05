@@ -17,32 +17,40 @@ export default function Main () {
   }
 
   return (
-    <form action="" onSubmit={registrar}>
-      <label htmlFor="nome">
-        <input
-          type="text"
-          name="telefone-lista"
-          id="nome"
-          onChange={(event)=> setNome(event.target.value)}
-        />
-      </label>
-      <label htmlFor="telefone">
-        <input
-          type="tel"
-          name="telefone-lista"
-          id="telefone"
-          onChange={(event)=> setTelefone(event.target.value)}
-        />
-      </label>
-      <label htmlFor="cpf">
-        <input
-          type="number"
-          name="telefone-lista"
-          id="cpf"
-          onChange={(event)=> setCpf(event.target.value)}
-        />
-      </label>
-      <button>Cadastrar</button>
-    </form>
+    <main>
+      <form action="" onSubmit={registrar}>
+        <label htmlFor="nome">
+          <input
+            type="text"
+            name="telefone-lista"
+            id="nome"
+            onChange={(event)=> setNome(event.target.value)}
+          />
+        </label>
+        <label htmlFor="telefone">
+          <input
+            type="tel"
+            name="telefone-lista"
+            id="telefone"
+            onChange={(event)=> setTelefone(event.target.value)}
+          />
+        </label>
+        <label htmlFor="cpf">
+          <input
+            type="number"
+            name="telefone-lista"
+            id="cpf"
+            onChange={(event)=> setCpf(event.target.value)}
+          />
+        </label>
+        <button>Cadastrar</button>
+      </form>
+      {listaTelefone.map((contato, index) => 
+      <div key={index} className="listaContatos">
+        <p>{contato.nomeSalvo}</p>
+        <p>{contato.telefoneSalvo}</p>
+        <p>{contato.cpfSalvo}</p>
+      </div>)}
+    </main>
   )
 }
