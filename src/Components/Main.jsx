@@ -16,6 +16,11 @@ export default function Main () {
     }])
   }
 
+  const remover = (index) => {
+    let novaLista = listaTelefone.filter((el, indice) => (index != indice))
+    setListaTelefone(novaLista)
+  }
+
   return (
     <main>
       <form action="" onSubmit={registrar}>
@@ -50,6 +55,10 @@ export default function Main () {
         <p>{contato.nomeSalvo}</p>
         <p>{contato.telefoneSalvo}</p>
         <p>{contato.cpfSalvo}</p>
+        <button onClick={function () {
+          remover(index)
+        }
+      }></button>
       </div>)}
     </main>
   )
